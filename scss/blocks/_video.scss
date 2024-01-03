@@ -1,0 +1,52 @@
+.video {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    @include decorNumber;
+    left: calc(50% + 555px);
+    transform: translate(-50%, 0%);
+    line-height: 1.7;
+    content: "IV";
+  }
+}
+
+.video__link {
+  position: relative;
+  display: block;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 43, 51, 0.8);
+    transition: background-color 0.2s ease-in;
+  }
+
+  &:hover::before {
+    background: rgba(36, 43, 51, 0.7)
+  }
+}
+
+.video__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in;
+
+  @include mediaTablet {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.video__link:hover .video__icon {
+  transform: translate(-50%, -50%) scale(1.2);
+  filter: saturate(1.5);
+}

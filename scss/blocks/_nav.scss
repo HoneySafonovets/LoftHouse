@@ -1,0 +1,13 @@
+// Styles Nav
+.nav {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.nav__list {
+  font-size: 14px;
+  display: flex;
+  font-family: $font-main;
+  flex-direction: row;
+  column-gap: 40px;
+}
