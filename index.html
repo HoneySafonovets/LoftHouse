@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./img/building.ico">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css">
   <title>LoftHouse</title>
 </head>
 <body>
@@ -123,7 +124,7 @@
           </div>
             <form action="" class="cta__form form">
               <input type="text" class="form__input" placeholder="Ваше имя">
-              <input type="text" class="form__input" placeholder="Ваш телефон">
+              <input data-tell-input type="text" class="form__input" placeholder="Ваш телефон">
               <p class="form__privacy form__privacy--bottom">
                 *Мы никому не передаем ваши данные. <br> 
                 И не сохраняем ваш номер в базу.
@@ -136,7 +137,7 @@
     <section class="video">
       <div class="container">
         <h2 class="visually-hidden">Видео про ЖК</h2>
-        <a href="#!" class="video__link">
+        <a href="https://www.youtube.com/watch?v=bhJNL9JUsnY" data-youtubeLightbox class="video__link">
           <img src="/img/Video/play.svg" alt="Play button" class="video__icon">
           <img src="/img/Video/Preview_video.jpg" alt="Video" class="video__img">
         </a>
@@ -163,13 +164,21 @@
             И не сохраняем ваш номер в базу.
           </p>
           <input type="text" class="form__input" placeholder="Ваше имя">
-          <input type="text" class="form__input" placeholder="Ваш телефон">
+          <input data-tell-input type="text" class="form__input" placeholder="Ваш телефон">
           <button type="submit" class="form__btn">Посмотерть район</button>
         </form>
       </div>
     </section>
   </main>
   <footer class="footer">
+    <!-- YouTube LightBox -->
+    <div id="youtubelightbox" class="youtubelightbox">
+      <div class="youtubelightbox__centeredchild">
+        <div class="youtubelightbox__videowrapper">
+          <div id="youtubelightboxPlayer"></div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="footer__grid">
         <div class="footer__logo"><img src="./img/logo.svg" alt="LoftHouse"></div>
@@ -214,6 +223,10 @@
       </div>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=85e63f2d-2347-4929-ab1f-be7987911aee&lang=ru_RU" type="text/javascript"></script>
+  <script src="./libs/phoneMask/mask.js"></script>
+  <script src="./libs/phoneMask/mask_list.js"></script>
+  <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>
