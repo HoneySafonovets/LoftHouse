@@ -1,8 +1,15 @@
-const navToggleStyle = document.querySelector('.nav__list');
-const navBtn = document.querySelector('.nav__list')
+const navToggleStyle = document.querySelector('.nav-icon');
+const navBtn = document.querySelector('.nav-icon-btn');
+const headerMobileBtn = document.querySelector('.header__top-row');
 
+// headerMobileBtn.addEventListener('click',)
+// navBtn.addEventListener('click', openNavMenu());
 
-
+navBtn.onclick = function() {
+  navToggleStyle.classList.toggle('nav-icon--active');
+  headerMobileBtn.classList.toggle('header__top-row--mobile');
+  document.body.classList.toggle('no-scroll');
+}
 
 // Phone mask
 mask('[data-tell-input]');

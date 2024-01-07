@@ -69,6 +69,8 @@
 
 .header__nav-btn {
   display: none;
+  cursor: pointer;
+
   @include mediaTablet {
     display: block;
   }

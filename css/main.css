@@ -97,6 +97,10 @@ body {
   font-size: 16px;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 a {
   color: white;
   transition: color 0.2s ease-in;
@@ -208,6 +212,7 @@ a:hover {
 
 .header__nav-btn {
   display: none;
+  cursor: pointer;
 }
 @media screen and (max-width: 959px) {
   .header__nav-btn {
@@ -501,7 +506,7 @@ a:hover {
 
 .card__title {
   position: absolute;
-  z-index: 9;
+  z-index: 8;
   right: 20px;
   left: 50px;
   bottom: 44px;
