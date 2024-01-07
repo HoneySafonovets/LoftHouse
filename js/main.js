@@ -1,6 +1,8 @@
 const navToggleStyle = document.querySelector('.nav-icon');
 const navBtn = document.querySelector('.nav-icon-btn');
 const headerMobileBtn = document.querySelector('.header__top-row');
+const navItems = document.querySelectorAll('.nav__list-item');
+const navArray = Array.from(navItems);
 
 // headerMobileBtn.addEventListener('click',)
 // navBtn.addEventListener('click', openNavMenu());
@@ -9,6 +11,22 @@ navBtn.onclick = function() {
   navToggleStyle.classList.toggle('nav-icon--active');
   headerMobileBtn.classList.toggle('header__top-row--mobile');
   document.body.classList.toggle('no-scroll');
+}
+navItems.forEach(e => {
+  e.onclick = function() {
+    navToggleStyle.classList.remove('nav-icon--active'),
+    headerMobileBtn.classList.remove('header__top-row--mobile'),
+    document.body.classList.remove('no-scroll'),
+    console.log('Work')
+  }
+})
+
+
+function navItemRemove() {
+  navToggleStyle.classList.remove('nav-icon--active');
+  headerMobileBtn.classList.remove('header__top-row--mobile');
+  document.body.classList.remove('no-scroll');
+  console.log('Work');
 }
 
 // Phone mask
